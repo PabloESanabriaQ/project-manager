@@ -18,13 +18,8 @@ export default function NavBar({ open, setOpen }: NavBarProps) {
       className={`w-screen h-screen fixed flex flex-col justify-evenly items-center bg-slate-500 
       overflow-hidden overflow-x-hidden
       transform ease-in-out duration-500 origin-left translate-x-0   
-      ${open ? "left-0" : "left-full"}`}
+      ${open ? "right-0" : "right-full"}`}
     >
-      <img
-        onClick={() => setOpen(!open)}
-        src={chevronLeft}
-        className="w-12 h-12 absolute m-4 top-0 left-0"
-      />
       <img
         src="https://www.kadencewp.com/wp-content/uploads/2020/10/alogo-2.png"
         className="w-2/6 md:w-1/6"
@@ -42,6 +37,11 @@ export default function NavBar({ open, setOpen }: NavBarProps) {
       <a href="#">
         <span>MY PROFILE</span>
       </a>
+      <img
+        onClick={() => setOpen(!open)}
+        src={chevronLeft}
+        className="w-12 h-12 absolute m-4 top-0 left-0"
+      />
     </nav>
   );
 }
