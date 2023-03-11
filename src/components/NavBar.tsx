@@ -26,10 +26,10 @@ export default function NavBar({ open, setOpen }: NavBarProps) {
         alt="logo"
       />
       <ul className="w-full flex flex-col items-center gap-12">
-        {NavItems.map((item) => (
-          <li className="w-full text-center">
+        {NavItems.map(({ name }) => (
+          <li className="w-full text-center" key={name}>
             <a href="#">
-              <span>{item.name}</span>
+              <span>{name}</span>
             </a>
           </li>
         ))}
