@@ -1,3 +1,5 @@
+import chevronLeft from ".././assets/chevron-left.png";
+
 const NavItems = [
   { name: "Home", link: "/" },
   { name: "My Stories", link: "/about" },
@@ -5,16 +7,24 @@ const NavItems = [
   { name: "My Projects", link: "/projects" },
 ];
 
-export default function NavBar({ open }: { open: boolean }) {
+interface NavBarProps {
+  open: boolean;
+  setOpen: (open: boolean) => void;
+}
+
+export default function NavBar({ open, setOpen }: NavBarProps) {
   return (
     <nav
-      className={
-        open
-          ? "w-screen h-screen flex flex-col justify-evenly items-center bg-slate-500 " +
-            "transform ease-in-out duration-500 origin-left translate-x-0 z-10"
-          : "w-0 h-0 overflow-hidden flex flex-col justify-evenly items-center bg-slate-500 "
-      }
+      className={`w-screen h-screen fixed flex flex-col justify-evenly items-center bg-slate-500 
+      overflow-hidden overflow-x-hidden
+      transform ease-in-out duration-500 origin-left translate-x-0   
+      ${open ? "left-0" : "left-full"}`}
     >
+      <img
+        onClick={() => setOpen(!open)}
+        src={chevronLeft}
+        className="w-12 h-12 absolute m-4 top-0 left-0"
+      />
       <img
         src="https://www.kadencewp.com/wp-content/uploads/2020/10/alogo-2.png"
         className="w-2/6 md:w-1/6"
