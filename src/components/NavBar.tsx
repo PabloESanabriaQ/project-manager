@@ -40,7 +40,7 @@ export default function NavBar({ open, setOpen }: NavBarProps) {
             </Link>
         ))}
       </ul>
-      <a href="#">
+      <a className="hover:bg-slate-700 hover:text-white p-5 w-full text-center" href="#">
         <span>MY PROFILE</span>
       </a>
     </nav>
