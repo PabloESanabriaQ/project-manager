@@ -25,7 +25,7 @@ export default function NavBar({ open, setOpen }: NavBarProps) {
         src={chevronLeft}
         className="w-12 h-12 absolute m-4 top-0 left-0 lg:hidden"
       />
-      <Link to={NavItems[0].path} className="w-2/6 lg:w-4/6">
+      <Link to={NavItems[0].path} className="w-2/6 lg:w-4/6 hover:scale-125 transition-all">
         <img
           src="https://www.kadencewp.com/wp-content/uploads/2020/10/alogo-2.png"
           alt="logo"
