@@ -1,8 +1,7 @@
-export default function NavMenu({ open }: { open: boolean }) {
-  if (open) return null;
+export default function NavMenu() {
   return (
-    <nav className="w-screen h-20 flex justify-evenly items-center">
-      <span className="text-xl font-bold">Here we are</span>
-    </nav>
+    <section className="w-1/2 h-20 min-h-fit flex items-center justify-center">
+      <span className="text-2xl font-semibold text-white ">/Home</span>
+    </section>
   );
 }

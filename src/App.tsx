@@ -1,14 +1,14 @@
 import { useState } from "react";
 import NavBar from "./components/NavBar";
 import Home from "./components/Home";
-
+import NavMenu from "./components/NavMenu";
 import hamburguer from "./assets/hamburguer.png";
 
 function App() {
   const [openNav, setOpenNav] = useState(false);
 
   return (
-    <div className="App flex flex-col w-full h-full items-center">
+    <div className="App flex flex-col w-full h-full items-center bg-slate-600">
       <header className="w-full">
         <img
           onClick={() => setOpenNav(!openNav)}
@@ -18,8 +18,11 @@ function App() {
           }`}
         />
         <NavBar open={openNav} setOpen={setOpenNav} />
-        <Home />
+        <NavMenu />
       </header>
+      <main className="flex w-full h-full items-center justify-center flex-col">
+        <Home />
+      </main>
     </div>
   );
 }
