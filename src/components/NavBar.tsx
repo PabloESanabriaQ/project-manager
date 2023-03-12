@@ -18,7 +18,7 @@ export default function NavBar({ open, setOpen }: NavBarProps) {
       className={`w-screen h-screen fixed flex flex-col justify-evenly items-center bg-slate-500
       overflow-hidden overflow-x-hidden text-lg
       transform ease-in-out duration-500 origin-left translate-x-0
-      lg:w-1/6 lg:left-0 lg:justify-around lg:text-xl
+      lg:w-1/6 lg:left-0 lg:top-0 lg:justify-around lg:text-xl
       ${open ? "right-0" : "right-full"}`}
     >
       <img

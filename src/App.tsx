@@ -8,8 +8,8 @@ function App() {
   const [openNav, setOpenNav] = useState(false);
 
   return (
-    <div className="App flex flex-col w-full h-full items-center bg-slate-600">
-      <header className="w-full">
+    <div className="App lg:flex w-full h-full items-center bg-slate-600">
+      <header className="w-1/6">
         <img
           onClick={() => setOpenNav(!openNav)}
           src={hamburguer}
@@ -18,9 +18,9 @@ function App() {
           }`}
         />
         <NavBar open={openNav} setOpen={setOpenNav} />
-        <NavMenu />
       </header>
-      <main className="flex w-full h-full items-center justify-center flex-col">
+      <main className="flex w-screen lg:w-5/6 h-screen flex-col items-center">
+        <NavMenu />
         <Home />
       </main>
     </div>
