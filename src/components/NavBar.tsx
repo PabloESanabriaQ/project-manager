@@ -1,12 +1,6 @@
 import { Link } from "react-router-dom";
 import chevronLeft from ".././assets/chevron-left.png";
-
-const NavItems = [
-  { name: "Home", path: "/" },
-  { name: "My Stories", path: "/my-stories" },
-  { name: "Settings", path: "/settings" },
-  { name: "My Projects", path: "/my-projects" },
-];
+import {NavItems} from "../utils/routes"
 
 interface NavBarProps {
   open: boolean;
@@ -31,11 +25,12 @@ export default function NavBar({ open, setOpen }: NavBarProps) {
         src={chevronLeft}
         className="w-12 h-12 absolute m-4 top-0 left-0 lg:hidden"
       />
-      <img
-        src="https://www.kadencewp.com/wp-content/uploads/2020/10/alogo-2.png"
-        className="w-2/6 lg:w-4/6"
-        alt="logo"
-      />
+      <Link to={NavItems[0].path} className="w-2/6 lg:w-4/6">
+        <img
+          src="https://www.kadencewp.com/wp-content/uploads/2020/10/alogo-2.png"
+          alt="logo"
+        />
+      </Link>
       <ul className="w-full flex flex-col items-center gap-12">
         {NavItems.map(({ name, path }) => (
             <Link to={path} key={name}  className="w-full text-center hover:bg-slate-700 hover:text-white p-5">

@@ -12,18 +12,17 @@ import RouteError from "./components/RouteError";
 
 function App() {
   const [openNav, setOpenNav] = useState(false);
-
   return (
     <BrowserRouter>
       <div className="App lg:flex w-full h-full items-center bg-slate-600">
         <header className="w-1/6">
-          <img
-            onClick={() => setOpenNav(!openNav)}
-            src={hamburguer}
-            className={`w-12 h-12 absolute m-4 top-0 left-0 lg:hidden ${
-              openNav ? "hidden" : ""
-            }`}
-          />
+            <img
+              onClick={() => setOpenNav(!openNav)}
+              src={hamburguer}
+              className={`w-12 h-12 absolute m-4 top-0 left-0 lg:hidden border ${
+                openNav ? "hidden" : ""
+              }`}
+            />
           <NavBar open={openNav} setOpen={setOpenNav} />
         </header>
         <main className="flex w-screen lg:w-5/6 h-screen flex-col items-center">
