@@ -19,7 +19,7 @@ function App() {
             <img
               onClick={() => setOpenNav(!openNav)}
               src={hamburguer}
-              className={`w-12 h-12 absolute m-4 top-0 left-0 lg:hidden border ${
+              className={`w-12 h-12 absolute m-4 top-0 left-0 lg:hidden ${
                 openNav ? "hidden" : ""
               }`}
             />

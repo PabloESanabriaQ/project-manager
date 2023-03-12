@@ -4,10 +4,10 @@ export default function BreadCrumb() {
   const location = useLocation();
 
   return (
-    <section className="w-1/2 h-20 min-h-fit flex items-center justify-center">
-      <span className="text-2xl font-semibold text-white">
-        {location.pathname.localeCompare("/")=== 0 ? "/home" : location.pathname}
-      </span>
+    <section className="py-5 w-full h-20 min-h-fit flex items-center justify-start">
+        <span className="mx-20 lg:mx-10 px-8 py-1 text-2xl text-white bg-slate-800 text-center flex justify-center rounded-full">
+          {location.pathname.localeCompare("/")=== 0 ? "/home" : location.pathname}
+        </span>
     </section>
   );
 }
