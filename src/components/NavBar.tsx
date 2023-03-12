@@ -1,10 +1,11 @@
+import { Link } from "react-router-dom";
 import chevronLeft from ".././assets/chevron-left.png";
 
 const NavItems = [
-  { name: "Home", link: "/" },
-  { name: "My Stories", link: "/about" },
-  { name: "Settings", link: "/contact" },
-  { name: "My Projects", link: "/projects" },
+  { name: "Home", path: "/" },
+  { name: "My Stories", path: "/my-stories" },
+  { name: "Settings", path: "/settings" },
+  { name: "My Projects", path: "/my-projects" },
 ];
 
 interface NavBarProps {
@@ -13,6 +14,10 @@ interface NavBarProps {
 }
 
 export default function NavBar({ open, setOpen }: NavBarProps) {
+  function handleClick() {
+    setOpen(false);
+  }
+
   return (
     <nav
       className={`w-screen h-screen fixed flex flex-col justify-evenly items-center bg-slate-500
@@ -32,11 +37,11 @@ export default function NavBar({ open, setOpen }: NavBarProps) {
         alt="logo"
       />
       <ul className="w-full flex flex-col items-center gap-12">
-        {NavItems.map(({ name }) => (
+        {NavItems.map(({ name, path }) => (
           <li className="w-full text-center" key={name}>
-            <a href="#">
-              <span>{name}</span>
-            </a>
+            <Link to={path}>
+              <span onClick={handleClick}>{name}</span>
+            </Link>
           </li>
         ))}
       </ul>
