@@ -15,9 +15,9 @@ interface NavBarProps {
 export default function NavBar({ open, setOpen }: NavBarProps) {
   return (
     <nav
-      className={`w-screen h-screen fixed flex flex-col justify-evenly items-center bg-slate-500 
+      className={`w-screen h-screen fixed flex flex-col justify-evenly items-center bg-slate-500
       overflow-hidden overflow-x-hidden
-      transform ease-in-out duration-500 origin-left translate-x-0   
+      transform ease-in-out duration-500 origin-left translate-x-0
       ${open ? "right-0" : "right-full"}`}
     >
       <img
