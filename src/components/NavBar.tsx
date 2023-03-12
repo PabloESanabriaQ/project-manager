@@ -38,11 +38,11 @@ export default function NavBar({ open, setOpen }: NavBarProps) {
       />
       <ul className="w-full flex flex-col items-center gap-12">
         {NavItems.map(({ name, path }) => (
-          <li className="w-full text-center" key={name}>
-            <Link to={path}>
-              <span onClick={handleClick}>{name}</span>
+            <Link to={path} key={name}  className="w-full text-center hover:bg-slate-700 hover:text-white p-5">
+              <li onClick={handleClick} >
+                <span>{name}</span>
+              </li>
             </Link>
-          </li>
         ))}
       </ul>
       <a href="#">
