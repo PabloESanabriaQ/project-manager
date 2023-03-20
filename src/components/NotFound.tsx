@@ -1,4 +1,4 @@
-export default function RouteError() {
+export default function NotFound() {
   return (
     <div className="w-full h-full flex items-center justify-center">
       <span className="text-2xl font-semibold text-white ">
